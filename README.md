@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-SQL Injection Scanner
+OSQL is a SQL injection scanner for authorised security testing. It tests GET parameters, forms and HTTP headers, and supports error-based, time-based and blind detection techniques. Targets can be scanned individually or in batch, with JSON report output.
 
 ---
 
 ## ✨ Features
 
-- Authorized SQL injection scanner: error-based, boolean-blind, and time-based GET/POST tests
+- GET parameter, form and HTTP header injection scanning
+- Error-based, time-based and blind SQL injection detection
+- Batch scanning of multiple target URLs from a file
+- Session cookie support and HTTP/HTTPS proxy routing
+- Configurable request delay, timeout and blind-delay threshold
+- JSON report output, activity logging and an offline self-test
 
 ---
 
@@ -38,7 +43,10 @@ SQL Injection Scanner
 ## 🚀 Usage
 
 ```bash
-./OSQL
+./OSQL -u "http://example.com/item?id=1"
+./OSQL -f "http://example.com/login" -c "session=abc"
+./OSQL -B targets.txt -o report.json
+./OSQL --help
 ```
 
 ---
